@@ -60,42 +60,68 @@
 ? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
 */
 
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
 
-  getItems() {
-    return this.items;
-  }
+//   getItems() {
+//     return this.items;
+//   }
 
-  addItem(item) {
-    this.items.push(item);
-  }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
 
-  removeItem(item) {
-    if (this.items.includes(item)) {
-      const idxOfItem = this.items.indexOf(item);
+//   removeItem(item) {
+//     if (this.items.includes(item)) {
+//       const idxOfItem = this.items.indexOf(item);
 
-      this.items.splice(idxOfItem, 1);
-    }
-  }
-}
+//       this.items.splice(idxOfItem, 1);
+//     }
+//   }
+// }
 
-const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
+// const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 
-console.table(storage.getItems()); // [ '🍎', '🍋', '🍇', '🍑' ]
+// console.table(storage.getItems()); // [ '🍎', '🍋', '🍇', '🍑' ]
 
-storage.addItem('🍌');
-console.table(storage.getItems()); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
+// storage.addItem('🍌');
+// console.table(storage.getItems()); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
 
-storage.removeItem('🍋');
-console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
+// storage.removeItem('🍋');
+// console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
 
 /*
 ? Напиши клас User який створює об'єкт із властивостями login та email.
 ? Оголоси приватні властивості #login та #email, доступ до яких зроби через геттер та сеттер login та email.
 */
+
+// class User {
+//   #login;
+//   #email;
+
+//   constructor({ login, email } = {}) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
 // const mango = new User({
 //   login: 'Mango',
@@ -105,6 +131,10 @@ console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
 // console.log(mango.login); // Mango
 // mango.login = 'Mangodoge';
 // console.log(mango.login); // Mangodoge
+
+// console.log(mango.email);
+// mango.email = 'hacag@ce.ie';
+// console.log(mango.email);
 
 // const poly = new User({
 //   login: 'Poly',
@@ -128,6 +158,38 @@ console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
 ? Додай методи addNote(note), removeNote(text) та updatePriority(text, newPriority).
 */
 
+// class Notes {
+//   static Priority = {
+//     LOW: 'low',
+//     NORMAL: 'normal',
+//     HIGH: 'high',
+//   };
+
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+
+//   removeNote(text) {
+//     const noteIdx = this.items.findIndex((el, idx, arr) => {
+//       return el.text === text;
+//     });
+
+//     this.items.splice(noteIdx, 1);
+//   }
+
+//   updatePriority(text, newPriority) {
+//     const note = this.items.find((el, idx, arr) => {
+//       return el.text === text;
+//     });
+
+//     note.priority = newPriority;
+//   }
+// }
+
 // const myNotes = new Notes([]);
 
 // myNotes.addNote({ text: 'Моя перша нотатка', priority: Notes.Priority.LOW });
@@ -142,7 +204,7 @@ console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
 // myNotes.removeNote('Моя перша нотатка');
 // console.log(myNotes.items);
 
-// myNotes.updateNote('Моя друга нотатка', Notes.Priority.HIGH);
+// myNotes.updatePriority('Моя друга нотатка', Notes.Priority.HIGH);
 // console.log(myNotes.items);
 
 /*
@@ -150,6 +212,16 @@ console.table(storage.getItems()); // [ '🍎', '🍇', '🍑', '🍌' ]
 ? та оголошує одну властивість on - стан вкл/викл (true/false).
 ? За замовчуванням значення властивості on має бути false.
 */
+
+// class Toggle {
+//   constructor({ isOpen = false } = {}) {
+//     this.on = isOpen;
+//   }
+
+//   toggle() {
+//     this.on = !this.on;
+//   }
+// }
 
 // const firstToggle = new Toggle({ isOpen: true });
 // console.group('firstToggle');

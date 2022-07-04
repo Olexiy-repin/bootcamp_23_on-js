@@ -7,13 +7,11 @@
 //   #email;
 
 //   constructor({ firstName, lastName, age, login, email } = {}) {
-//     // this = {};
 //     this.firstName = firstName;
 //     this.lastName = lastName;
 //     this.userAge = age;
 //     this.#login = login;
 //     this.#email = email;
-//     // return this;
 //   }
 
 //   get login() {
@@ -41,58 +39,57 @@
 //   }
 // }
 
-// class Manager extends User {
-//   constructor(obj) {
-//     const { numberOfSales, ...otherProps } = obj;
-
-//     super(otherProps);
-//     this.numberOfSales = numberOfSales;
-//   }
-
-//   getFullName() {
-//     return super.getFullName();
-//   }
-
-//   doManagerWork() {
-//     console.log('Занимаюсь продажами');
-//   }
-// }
-
-// console.dir(Manager);
-
-// const manager = new Manager({
-//   firstName: 'Addie',
-//   lastName: 'Burgess',
-//   age: 20,
-//   login: 'someLogin',
-//   email: 'uhmop@balninih.sd',
-//   numberOfSales: 20,
-// });
-
-// console.log(manager);
-
-// console.log(manager.getFullName());
-
 // class Developer extends User {
-//   constructor(obj) {
-//     const { completedProjects, ...otherProps } = obj;
-
-//     super(otherProps);
-//     this.completedProjects = completedProjects;
+//   constructor({ countOfProjects, ...props } = {}) {
+//     // this = super(props);
+//     super(props);
+//     this.countOfProjects = countOfProjects;
 //   }
 
 //   doDeveloperWork() {
-//     console.log('Пишу проэкт');
+//     console.log(`Роблю якусь роботу`);
 //   }
 // }
 
-// const developer = new Developer({
-//   firstName: 'Bertha',
-//   lastName: 'Byrd',
-//   age: 22,
-//   login: 'myLogin',
-//   email: 'tudeoh@ede.fm',
-//   completedProjects: 45,
+// class Manager extends User {
+//   constructor({ managerProp, ...props } = {}) {
+//     super(props);
+//     this.managerProp = managerProp;
+//   }
+
+//   doManagerWork() {
+//     console.log(`Роблю якусь роботу`);
+//   }
+// }
+
+// const userOleksii = new User({
+//   firstName: 'Oleksii',
+//   lastName: 'Repin',
+//   age: 40,
+//   login: 'oleksii',
+//   email: 'ta@ilvion.com',
 // });
 
-// console.log(developer);
+// console.log(userOleksii);
+
+// const developerOleksii = new Developer({
+//   firstName: 'Oleksii',
+//   lastName: 'Repin',
+//   age: 40,
+//   login: 'oleksii',
+//   email: 'ta@ilvion.com',
+//   countOfProjects: 10,
+// });
+
+// console.log(developerOleksii);
+
+// const managerOleksii = new Manager({
+//   firstName: null,
+//   lastName: 'Repin',
+//   age: 40,
+//   login: 'oleksii',
+//   email: 'ta@ilvion.com',
+//   managerProp: 50,
+// });
+
+// console.log(managerOleksii);
