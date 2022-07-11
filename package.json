@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp_23_on",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olexiy-repin/bootcamp_23_on-js.git"
+  },
+  "author": "Oleksii Repin <lyoharepin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olexiy-repin/bootcamp_23_on-js/issues"
+  },
+  "homepage": "https://github.com/Olexiy-repin/bootcamp_23_on-js#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
+  }
+}

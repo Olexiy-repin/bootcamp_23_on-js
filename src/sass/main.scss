@@ -1,0 +1,8 @@
+.title {
+  color: tomato;
+
+  &:hover,
+  &:focus {
+    color: teal;
+  }
+}
