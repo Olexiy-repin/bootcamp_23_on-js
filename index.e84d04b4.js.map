@@ -1,0 +1,1 @@
+{"mappings":"AAAA,aAEAA,QAAQC,IAAI","sources":["src/js/index.js"],"sourcesContent":["'use strict';\n\nconsole.log('Hello');\n"],"names":["console","log"],"version":3,"file":"index.e84d04b4.js.map"}
