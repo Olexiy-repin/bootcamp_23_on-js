@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Heroes</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -12,22 +13,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/heroes.css" />
   </head>
 
   <body>
-    <div class="container">
-      <ol class="navigation">
-        <li class="navigation__item">
-          <a href="./contact-form.html" class="navigation__link"
-            >Форма зворотнього зв'язку</a
-          >
-        </li>
-        <li class="navigation__item">
-          <a href="./heroes.html" class="navigation__link">Галерея героїв</a>
-        </li>
-      </ol>
-    </div>
+    <section class="heroes">
+      <div class="container">
+        <ul class="heroes-list js-heroes-list list"></ul>
+      </div>
+    </section>
 
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/heroes.js"></script>
   </body>
 </html>
